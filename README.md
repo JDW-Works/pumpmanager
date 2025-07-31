@@ -59,3 +59,13 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+
+## 部署在子目錄
+
+若將本專案部署於網站的子目錄（例如 `/pumpmanager/public`），請確保在 `public/.htaccess` 中加入對應的 `RewriteBase` 設定：
+
+```apache
+RewriteBase /pumpmanager/public
+```
+
+此設定可以讓 `http://<主機>/pumpmanager/public/userdata` 等路由正常運作。
