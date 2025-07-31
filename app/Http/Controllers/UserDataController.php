@@ -10,15 +10,24 @@ class UserDataController extends Controller
     public function index(Request $request)
     {
         $query = UserData::query();
-        $search = $request->input('q');
-        if ($search) {
-            $query->where(function ($q) use ($search) {
-                $q->where('u_idno', 'like', "%{$search}%")
-                  ->orWhere('u_name', 'like', "%{$search}%")
-                  ->orWhere('u_company', 'like', "%{$search}%");
-            });
+
+        $account = $request->input('account');
+        $name = $request->input('name');
+
+        if ($account) {
+            $query->where('u_idno', 'like', "%{$account}%");
         }
-        $users = $query->paginate(10);
-        return view('userdata.index', ['users' => $users, 'search' => $search]);
+
+        if ($name) {
+            $query->where('u_name', 'like', "%{$name}%");
+        }
+
+        $users = $query->paginate(10)->appends($request->only('account', 'name'));
+
+        return view('userdata.index', [
+            'users' => $users,
+            'account' => $account,
+            'name' => $name,
+        ]);
     }
 }
