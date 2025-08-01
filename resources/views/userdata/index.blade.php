@@ -15,7 +15,7 @@
                 <input id="name" type="text" name="name" value="{{ $name }}" placeholder="搜尋名稱"
                     class="mt-1 w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
             </div>
-            <div class="flex gap-2">
+            <div class="flex gap-2 col-span-full md:col-span-1 mt-2 md:mt-0">
                 <button type="submit"
                     class="flex items-center justify-center gap-1 bg-indigo-800 hover:bg-indigo-900 text-white px-4 py-2 rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
