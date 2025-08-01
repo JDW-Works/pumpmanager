@@ -3,6 +3,9 @@
 @section('content')
 <div class="container mx-auto p-4">
     <h1 class="text-2xl font-bold mb-4">UserData 查詢</h1>
+    <div class="mb-4">
+        <a href="{{ route('userdata.create') }}" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-md">新增使用者</a>
+    </div>
     <div class="bg-white p-4 rounded shadow mb-4">
         <form method="get" class="grid gap-4 md:grid-cols-3 items-end">
             <div>
