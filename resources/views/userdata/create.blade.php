@@ -29,8 +29,8 @@
             </select>
         </div>
         <div class="md:col-span-2 flex gap-2">
-            <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-md">儲存</button>
-            <a href="{{ route('userdata.index') }}" class="bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md">取消</a>
+            <button type="submit" class="bg-cyan-700 hover:bg-cyan-800 text-white px-4 py-2 rounded-md">儲存</button>
+            <a href="{{ route('userdata.index') }}" class="bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-md">取消</a>
         </div>
     </form>
 </div>
