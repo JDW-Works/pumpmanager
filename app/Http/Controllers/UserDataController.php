@@ -30,4 +30,24 @@ class UserDataController extends Controller
             'name' => $name,
         ]);
     }
+
+    public function create()
+    {
+        return view('userdata.create');
+    }
+
+    public function store(Request $request)
+    {
+        $validated = $request->validate([
+            'u_idno' => 'required|string|max:15|unique:userdatas,u_idno',
+            'u_name' => 'required|string|max:20',
+            'u_passwd' => 'required|string|max:15',
+            'u_company' => 'nullable|string',
+            'u_status' => 'required|string|max:5',
+        ]);
+
+        UserData::create($validated);
+
+        return redirect()->route('userdata.index');
+    }
 }
