@@ -4,7 +4,7 @@
 <div class="container mx-auto p-4">
     <h1 class="text-2xl font-bold mb-4">UserData 查詢</h1>
     <div class="mb-4">
-        <a href="{{ route('userdata.create') }}" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded-md">新增使用者</a>
+        <a href="{{ route('userdata.create') }}" class="bg-cyan-700 hover:bg-cyan-800 text-white px-4 py-2 rounded-md">新增使用者</a>
     </div>
     <div class="bg-white p-4 rounded shadow mb-4">
         <form method="get" class="grid gap-4 md:grid-cols-3 items-end">
@@ -20,7 +20,7 @@
             </div>
             <div class="flex gap-2 col-span-full md:col-span-1 mt-2 md:mt-0">
                 <button type="submit"
-                    class="flex items-center justify-center gap-1 bg-indigo-800 hover:bg-indigo-900 text-white px-4 py-2 rounded-md">
+                    class="flex items-center justify-center gap-1 bg-cyan-700 hover:bg-cyan-800 text-white px-4 py-2 rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -28,7 +28,7 @@
                     <span>搜尋</span>
                 </button>
                 <a href="{{ route('userdata.index') }}"
-                    class="flex items-center justify-center gap-1 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-md">
+                    class="flex items-center justify-center gap-1 bg-cyan-600 hover:bg-cyan-700 text-white px-4 py-2 rounded-md">
                     <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24"
                         stroke="currentColor" stroke-width="2">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
